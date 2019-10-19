@@ -10,6 +10,7 @@ public class Main {
         long amountToCalculateDiscount=1_000_00L;
         int discount=5;
         long maximumAmountDiscount=100_00L;
+
         Tariff tariff=new Tariff(landingPrice,tripPrice,amountToCalculateDiscount,discount,maximumAmountDiscount);
         TripService trip = new TripService();
         System.out.println("Стоимость поездки "+trip.calculationAmount(distance, tariff)/oneHundredPenny+" руб.");
