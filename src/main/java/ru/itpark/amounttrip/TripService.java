@@ -1,4 +1,4 @@
-package ru.itpark.amountTrip;
+package ru.itpark.amounttrip;
 
 public class TripService {
 

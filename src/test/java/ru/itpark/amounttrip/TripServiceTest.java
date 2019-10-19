@@ -1,4 +1,4 @@
-package ru.itpark.amountTrip;
+package ru.itpark.amounttrip;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-import ru.itpark.amountTrip.TripService;
+import ru.itpark.amounttrip.TripService;
 
 public class Main {
     public static void main(String[] args) {
