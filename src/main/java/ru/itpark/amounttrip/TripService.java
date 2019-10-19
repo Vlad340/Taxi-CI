@@ -1,23 +1,24 @@
 package ru.itpark.amounttrip;
 
 public class TripService {
+    private long amount;
 
-    public long calculationAmount(long distance, new Tariff()) {
+    public long calculationAmount(long distance, Tariff tariff ) { //new Tariff(60_00L,20_00L,1_000_00L,5,100_00L)) {
         int oneHundredPercent = 100;
 
         if (distance == 0) {
             return 0;
         }
-        Tariff tariff = new Tariff(60_00L,20_00L,1_000_00L,5,100_00L);
-        long amount = tariff.landingPrice + tariff.tripPrice * distance;
-        if (amount <= tariff.amountToCalculateDiscount) {
+//        Tariff tariff = new Tariff(60_00L,20_00L,1_000_00L,5,100_00L);
+        amount =tariff.getLandingPrice()  +tariff.getTripPrice() * distance;
+        if (amount <= tariff.getAmountToCalculateDiscount()) {
             return amount;
         }
-        long discount = tariff.discount*amount/oneHundredPercent;
-        if (discount > tariff.maximumAmountDiscount) {
-            discount = tariff.maximumAmountDiscount;
+        long amountDiscount =tariff.getDiscount()*amount/oneHundredPercent;
+        if (amountDiscount >tariff.getMaximumAmountDiscount()) {
+            amountDiscount =tariff.getMaximumAmountDiscount();
         }
-        amount -=discount;
+        amount -=amountDiscount;
         return amount;
     }
 }
