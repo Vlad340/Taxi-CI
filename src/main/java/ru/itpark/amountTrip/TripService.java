@@ -8,7 +8,7 @@ public class TripService {
         if (distance == 0) {
             return 0;
         }
-        TariffService tariff = new TariffService();
+        TariffService tariff = new TariffService(60_00L,20_00L,1_000_00L,5,100_00L);
         long amount = tariff.landingPrice + tariff.tripPrice * distance;
         if (amount <= tariff.amountToCalculateDiscount) {
             return amount;
