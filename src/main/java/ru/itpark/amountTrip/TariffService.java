@@ -1,11 +1,11 @@
 package ru.itpark.amountTrip;
 
 public class TariffService {
-    long landingPrice;
-    long tripPrice;
-    long amountToCalculateDiscount;
-    int discount;
-    long maximumAmountDiscount;
+    private long landingPrice;
+    private long tripPrice;
+    private long amountToCalculateDiscount;
+    private int discount;
+    private long maximumAmountDiscount;
 
     public TariffService() {
         this.landingPrice = 60_00L;

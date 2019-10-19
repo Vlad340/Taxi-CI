@@ -2,7 +2,7 @@ package ru.itpark.amountTrip;
 
 public class TripService {
 
-    public long calculationAmount(long distance) {
+    public long calculationAmount(long distance, new TariffService()) {
         int oneHundredPercent = 100;
 
         if (distance == 0) {
